@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"e646fdf8c2aeccad","type":"text","text":"Numpy","x":-133,"y":-120,"width":250,"height":60,"color":"1"},
+		{"id":"8b57721d4bf5181c","type":"text","text":"Python","x":-133,"y":-560,"width":250,"height":60,"color":"6"},
+		{"id":"17c92ab00d330e11","type":"text","text":"Basics","x":-133,"y":-330,"width":250,"height":60,"color":"6"},
+		{"id":"9598d7c391988c5d","type":"text","text":"Simulations","x":-133,"y":340,"width":250,"height":60,"color":"4"},
+		{"id":"c429d8a1b264185e","type":"text","text":"Scipy","x":-460,"y":110,"width":250,"height":60,"color":"1"},
+		{"id":"a45bf735e4fbcc7b","type":"text","text":"Pandas","x":-133,"y":110,"width":250,"height":60,"color":"1"},
+		{"id":"a532f016f1c48db7","type":"text","text":"Matplotlib","x":180,"y":110,"width":250,"height":60,"color":"1"},
+		{"id":"93b80513b4dad2eb","type":"text","text":"Data Types","x":-710,"y":-560,"width":250,"height":60,"color":"3"},
+		{"id":"a44898966cdbc848","type":"text","text":"Data Structers","x":-710,"y":-460,"width":250,"height":60,"color":"3"},
+		{"id":"5ccfe96a9b8a872b","type":"text","text":"Control Flow","x":-710,"y":-360,"width":250,"height":60,"color":"3"},
+		{"id":"4093d436469c1510","type":"text","text":"Functions","x":-710,"y":-270,"width":250,"height":60,"color":"3"},
+		{"id":"285a88860a03f96d","type":"text","text":"Classes","x":-710,"y":-180,"width":250,"height":60,"color":"3"}
+	],
+	"edges":[
+		{"id":"f601cfb99003fcd7","fromNode":"8b57721d4bf5181c","fromSide":"bottom","toNode":"17c92ab00d330e11","toSide":"top"},
+		{"id":"0e8aab35cba7f070","fromNode":"17c92ab00d330e11","fromSide":"bottom","toNode":"e646fdf8c2aeccad","toSide":"top"},
+		{"id":"229aa052f2da25f8","fromNode":"e646fdf8c2aeccad","fromSide":"bottom","toNode":"c429d8a1b264185e","toSide":"top"},
+		{"id":"f92918b56dc572b5","fromNode":"e646fdf8c2aeccad","fromSide":"bottom","toNode":"a45bf735e4fbcc7b","toSide":"top"},
+		{"id":"d3d9d655dcd66992","fromNode":"e646fdf8c2aeccad","fromSide":"bottom","toNode":"a532f016f1c48db7","toSide":"top"},
+		{"id":"52cc106326e5d00c","fromNode":"17c92ab00d330e11","fromSide":"left","toNode":"93b80513b4dad2eb","toSide":"right"},
+		{"id":"430e7fcbfa06b5b4","fromNode":"c429d8a1b264185e","fromSide":"bottom","toNode":"9598d7c391988c5d","toSide":"top"},
+		{"id":"06b06b8630c96c5d","fromNode":"a45bf735e4fbcc7b","fromSide":"bottom","toNode":"9598d7c391988c5d","toSide":"top"},
+		{"id":"542c2146225b7499","fromNode":"a532f016f1c48db7","fromSide":"bottom","toNode":"9598d7c391988c5d","toSide":"top"},
+		{"id":"9a07e0321103412e","fromNode":"93b80513b4dad2eb","fromSide":"bottom","toNode":"a44898966cdbc848","toSide":"top"},
+		{"id":"ae2efe60d1be6aa7","fromNode":"a44898966cdbc848","fromSide":"bottom","toNode":"5ccfe96a9b8a872b","toSide":"top"},
+		{"id":"323849adb267b398","fromNode":"5ccfe96a9b8a872b","fromSide":"bottom","toNode":"4093d436469c1510","toSide":"top"},
+		{"id":"c598f7af9d59d87a","fromNode":"4093d436469c1510","fromSide":"bottom","toNode":"285a88860a03f96d","toSide":"top"}
+	]
+}
