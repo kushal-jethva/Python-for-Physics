@@ -1,4 +1,4 @@
-[[Data Structures]]
+[[Basics/Data Structures]]
 [[Data Types]]
 [[Control Flow]]
 [[Functions]]
