@@ -2,10 +2,11 @@ Data structure is a way of organizing and storing data so that it can be accesse
 
 In Python there are mainly 4 data structures that we are going to learn. However you can create your own data structure using them.
 
-- Lists
-- Dictionary
-- Tuples
-- Sets
+- [[#Lists]]
+- [[#Dictionary]]
+- [[#Tuple]]
+- [[#Sets]]
+
 
 # Lists
 
@@ -18,23 +19,26 @@ Think of a list as a container that stores multiple values in order.
 a=[1,2,3,4,5] # syntax to create list
 ```
 
-To create a list simply add data separated by commas in square brackets.
+To create a list simply add data separated by commas in square brackets. 
+
 
 ## List Manipulation
 
 ---
 
-Accessing data stored in list. Just like matrices, we use indexes to access values stored in lists.
+### Accessing data
+Just like matrices, we use indexes to access values stored in lists.
 
 ```python
 
 a=[1 , 2 , 3 , 4 , 'name' , 1+2j , 1.02 , True] 
 # Lists can store multiple data types together.
-print(a[0]) 
+print(a[0]) # gives data at index 0
 
 # Format to access data
 # list[index]
 ```
+
 
 Index in list starts with 0 from left and also -1 from right.
 
@@ -68,13 +72,15 @@ print(a[2:]) #output:  [3,4,5]
 print(a[::2]) #output: [1,3,5]
 ```
 
-|Format|Output|
-|---|---|
-|`[:]`|all values|
-|`[::2]`|every second value|
-|`[::-1]`|Reversing List|
-|`[2:3]`|value at 2 index (we skip end index 3)|
-|`[4:1:-1]`|values from 4 to 2 in reverse order|
+| Format     | Output                                 |
+| ---------- | -------------------------------------- |
+| `[:]`      | all values                             |
+| `[::2]`    | every second value                     |
+| `[::-1]`   | Reversing List                         |
+| `[2:3]`    | value at 2 index (we skip end index 3) |
+| `[4:1:-1]` | values from 4 to 2 in reverse order    |
+|            |                                        |
+
 
 ## Adding Data points
 
@@ -89,6 +95,7 @@ a.extend([2,3,4]) # will extend the list and add these points at the end
 
 a.insert(0,2) # insert value 2 at 0th index
 ```
+
 
 ## Other Methods
 
@@ -112,6 +119,7 @@ del a     # deletes variable a from memory
 # clear() removes all items from the list, while del removes the variable itself
 ```
 
+
 ```python
 b=[1,2,2,5,2,3]
 
@@ -134,6 +142,7 @@ a=b.copy() # copies b into a
 
 ```
 
+
 ```python
 # changing values
 
@@ -141,6 +150,7 @@ a=[1,2,3,4,5]
 a[0]=3  # changes value at index 0 to 3
 print(a) #output: [3,2,3,4,5]
 ```
+
 
 ```python
 # nested list
@@ -158,6 +168,7 @@ print(a[0][0])   # a[0] calls first index value: [1,2]
                  # first index value: 1 
 ```
 
+
 ## More functions
 
 ---
@@ -173,6 +184,7 @@ print(min(a)) # gives minimum value present in a
 
 ```
 
+
 ```python
 
 a=2
@@ -184,6 +196,7 @@ print(a in b) # gives boolean value
 # it checks if a is present in b
 ```
 
+
 ```python
 
 a=[1,2,3,4]
@@ -193,6 +206,7 @@ c=a+b  # creates new combined list (union)
 print(c)
 ```
 
+
 ```python
 
 a=[1]
@@ -200,6 +214,7 @@ a=[1]
 print(a*4) # gives [1,1,1,1]
 # The list is repeated 4 times
 ```
+
 
 ## NOTE
 
@@ -221,6 +236,8 @@ print(a*4) # gives [1,1,1,1]
 - list.copy()
 - list.clear()
 
+
+
 # Dictionary
 
 ---
@@ -231,7 +248,7 @@ In a list we store values by position (index), but in a Dictionary we store valu
 
 data={ 'name':'VED' , 'class':6 , 'age':11 }
 
-# here name, class, age are labels — called keys in Python
+# here name, class, age are labels , called keys in Python
 # and VED, 6, 11 are called values
 
 BMI_data={'height':180,'weight':75}
@@ -254,13 +271,14 @@ To create a dictionary remember the format: inside curly brackets, keys and valu
 a = { key1 : value1 , key2 : value2 ...}
 ```
 
-Keys should not be duplicates — it will cause issues while accessing values. Dictionary keys do not have to be strings; numbers can also be used as keys.
+Keys should not be duplicates , it will cause issues while accessing values. Dictionary keys do not have to be strings; numbers can also be used as keys.
 
 You can also use the dict() constructor:
 
 ```python
 values=dict(name='ved', age=11 , gender='male')
 ```
+
 
 ## Accessing values
 
@@ -316,6 +334,7 @@ a.pop(1)       # also removes key 1 and returns its value
 print(a)       # {2: 2}
 ```
 
+
 ## Other functions
 
 ---
@@ -327,6 +346,7 @@ print(a.keys())   # returns all the keys
 print(a.values()) # returns all the values
 print(a.items())  # returns key-value pairs in tuple format
 ```
+
 
 ## NOTE
 
@@ -342,6 +362,7 @@ print(a.items())  # returns key-value pairs in tuple format
 - dict.keys()
 - dict.values()
 - dict.items()
+
 
 # Tuple
 
@@ -382,11 +403,12 @@ print(name.count('himesh')) # counts occurrences of 'himesh'
 print(name.index('himesh')) # returns index of 'himesh'
 ```
 
+
 # Set
 
 ---
 
-Same as sets in maths — it does not allow duplicate values, has no guaranteed order, and its **elements** must be immutable (e.g., numbers, strings). However, the set itself is **mutable** — you can add and remove items.
+Same as sets in maths ,it does not allow duplicate values, has no guaranteed order. However, the set itself is **mutable** i.e. you can add and remove items.
 
 ```python
 values={0,1,2,3,4,'name',True,0.001}
@@ -401,6 +423,7 @@ Simply use curly brackets to define a set.
 empty_set  = set()   #  correct
 empty_dict = {}      #  this is a dictionary, not a set
 ```
+
 
 ### Operations on set
 
@@ -420,6 +443,7 @@ symmetric_diff   = data1 ^ data2
 # values in data1 or data2 but not in both
 ```
 
+
 ```python
 data={0,1,2,3,4}
 
@@ -430,6 +454,7 @@ data.discard(1)    # removes value 1; does NOT raise error if not present
 
 data.clear()       # removes all values
 ```
+
 
 ## NOTE
 
