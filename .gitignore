@@ -1,4 +1,4 @@
-.env
-.obsidian
-.canvas
-.py
+*.env
+*.obsidian
+*.canvas
+*.py
