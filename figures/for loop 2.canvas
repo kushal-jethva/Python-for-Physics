@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"fe9bb91a20bcdde2","x":-208,"y":-165,"width":308,"height":105,"type":"text","text":"```python\nfor i in range(start,stop):\n\t\n```"},
+		{"id":"0b7a12b8c557740d","x":-178,"y":-1,"width":250,"height":81,"type":"text","text":"```python\n# UPDATES VALUE OF i\n```"},
+		{"id":"33f4584a823858ac","x":-178,"y":160,"width":250,"height":105,"type":"text","text":"```python\n# LOGIC BLOCK\nprint(i*20)\n```"}
+	],
+	"edges":[
+		{"id":"732c73770db1687d","fromNode":"33f4584a823858ac","fromSide":"right","toNode":"fe9bb91a20bcdde2","toSide":"right"},
+		{"id":"a3efc39a3c48a8e1","fromNode":"fe9bb91a20bcdde2","fromSide":"bottom","toNode":"0b7a12b8c557740d","toSide":"top"},
+		{"id":"5e8b03d312881943","fromNode":"0b7a12b8c557740d","fromSide":"bottom","toNode":"33f4584a823858ac","toSide":"top"}
+	]
+}
