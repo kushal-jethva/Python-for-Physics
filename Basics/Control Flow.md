@@ -206,3 +206,133 @@ a = ['kushal','himesh','jay','harsh']
 for names in a:
 	print(names)
 ```
+
+```python
+
+time = [1,2,3,4,5,6,7,8]
+v = [10] # initial speed m/s
+a = 2 #m/s2
+
+for t in time:
+	# final speed = u + at
+	speed = v[-1] + a*t
+	
+	# v[-1] give the last speed
+	
+	v.append(speed)
+print(v)
+```
+
+zip() is a special function that takes 2  or more iterables (list or tuple) of same length and give one element from both at same time.
+
+```python
+# using zip
+a=[1,2,3,4,5]
+b=[2,4,6,8,10]
+c=[]
+for x,y in zip(a,b):
+	print(x,y)
+	c.append(x*y)
+
+print()
+print()
+
+for x,y,z in zip(a,b,c):
+	print(x,y,z)
+
+```
+
+enumerate(list/tuple) is a function that gives index,value from the list/tuple
+
+```python
+a=[10,20,30,40,50]
+
+for index,value in enumerate(a):
+	print(index,value)
+```
+
+### NOTE
+---
+
+|  Function   | Input           | Ouput                                        |
+| :---------: | --------------- | -------------------------------------------- |
+|   range()   | start,stop,skip | sequence of [start,stop) skipping skip value |
+|    zip()    | list,tuple,...  | gives tuple of each value at same index      |
+| enumerate() | list,tuple      | gives index,value pair from iterable         |
+### range
+---
+> - takes integer values
+> - sequence is [start,stop) skipping skip value
+> - default start 0 , default skip 1
+
+### zip
+---
+> - takes multiple iterables 
+> - gives values from each iterables simultaneously
+
+### enumerate
+---
+> - takes iterable
+> - gives index,value pair
+
+
+## while loop
+---
+
+unlike `for loop`, `while loop` runs till a condition is satisfied
+
+![[while loop.canvas]]
+```python
+a=1
+while a<=10:
+	a+=1
+	print(a)
+```
+
+while loop is used when you care about if condition is match and dont know how many time the loop will run, for loop need specific length over which it will loops, and while loop require condition and will loop till the condition is matched
+
+## Example
+---
+```python
+a=10
+while True: # will run forever
+	a-=1
+	print(a)
+	if a==0:
+		break # explicitly breaking the loop
+```
+
+```python
+a = 5
+factorial = 1
+
+while a!=1: # will break when a==1
+	factorial*=a 
+	a-=1 # reducing a
+	
+print(factorial)
+```
+
+Let us solve a problem:
+*  a ball at height 5 m is thrown upwards with 10m/s speed. Find total time it will take to reach the ground.
+
+```python
+u = 10 #m/s
+h = 5 # m initial height
+dt = 1e-3 # 1 x 10^-3
+g = -9.8 #m/s2
+T = 0
+while h>0:
+	# height travelled
+	h += u*dt + 0.5*g*dt**2
+	# update velocity
+	u += g*dt 
+	T += dt # total time
+	print(h)
+	
+T-=dt # last negative height dt
+print(T)
+```
+
+
+
