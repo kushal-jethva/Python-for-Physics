@@ -34,22 +34,31 @@ Python treats empty values as False.
 
 ```python
 a='123' #True
-print(if a)
+if a : 
+	print('True')
 
 a=1 #True
-print(if a)
+if a : 
+	print('True')
+
 
 a=[1,2,3] #True
-print(if a)
-
+if a : 
+	print('True')
+	
 a=0 #False
-print(if a)
+if not a : 
+	print('False')
 
 a='' #False
-print(if a)
+if not a : 
+	print('False')
+
 
 a=[] #False
-print(if a)
+if not a : 
+	print('False')
+
 ```
 
 This is useful if you want to check if some variable like list is empty or not.
@@ -58,6 +67,7 @@ This is useful if you want to check if some variable like list is empty or not.
 a=[]
 
 if a:
+	print('a is not empty')
 	a.append(1)
 	print(a)
 else:
@@ -69,19 +79,22 @@ else:
 If you have multiple conditions we use `elif` (else-if) to include other conditions
 
 ```python
-a=1
+angle=67
 
-if type(a)==int:
-	print('a is an integer')
+if angle<90:
+	print('acute angle')
 	
-elif type(a)==float:
-	print('a is float')
+elif a==90:
+	print('right angle')
 	
-elif type(a)==complex:
-	print('a is complex')
+elif angle>90 and angle<180:
+	print('obtuse angle')
+	
+elif angle==180:
+	print('straight angle')
 	
 else:
-	print('a is of some other data type')
+	print('reflex angle')
 ```
 
 ### Examples
@@ -116,11 +129,11 @@ elif current_time==target_time:
 	print('you are perfectly fine')
 
 '''
+alternate way
 else:
 	print('you are perfectly fine')
 	
 
-else can be used as this was the only condition left
 else is used when no more condition left or no condition matched
 or can be used when a single condition is left
 '''
@@ -151,26 +164,37 @@ else: print('a is odd')
 
 ## Loops
 ---
-There are two main type of loops in python `for` and `while` loops.
-`for` loop is used for specific range/values.
-`while` loop is used for specific condition matched.
+There are two main type of loops in python :
+*  `for loop`
+* `while loop`
+
+`for` loop is used to loop for specific range/values.
+`while` loop is used to loop till specific condition matched.
 
 ### for loop
 ---
-![[for loop.canvas]]
+[[for loop.canvas]]
+![[for_loop.png]]
+
 >`NOTE`:
 > - range(start,stop,skip)
 > - range function takes integer start stop and skip values
 > - it creates a sequence from start point to stop point(excluded) and skips no. in between (default is 1)
 > - [start,stop)
 
+
 ```python
 for i in range(0,5):
 	print(i)
 ```
 
+
 `for i in range` its function is just as its read , for variable named i in range , then in performs logic block and i values are changed each time block is completed.
-![[for loop 2.canvas]]
+
+
+[[for loop 2.canvas]]
+![[for_loop_2.png]]
+
 
 we can give any variable name as we like-
 
@@ -191,13 +215,17 @@ for i in range(1,11): #1 to 10
 	print('13 times',i,'=',13*i)
 ```
 
+
 ```python
 # Nested loops
 
 for i in range(1,7): # 1 to 6
 	for j in range(i): # 0 to i-1
 		print('*'*j)
+		
+	print() # empty line after the inner loop finishes
 ```
+
 
 ```python
 a = ['kushal','himesh','jay','harsh']
@@ -207,15 +235,17 @@ for names in a:
 	print(names)
 ```
 
+
 ```python
 
-time = [1,2,3,4,5,6,7,8]
+dt = 1 #s
 v = [10] # initial speed m/s
 a = 2 #m/s2
 
-for t in time:
+for t in range(10):
+	
 	# final speed = u + at
-	speed = v[-1] + a*t
+	speed = v[-1] + a*dt
 	
 	# v[-1] give the last speed
 	
@@ -223,7 +253,9 @@ for t in time:
 print(v)
 ```
 
-zip() is a special function that takes 2  or more iterables (list or tuple) of same length and give one element from both at same time.
+
+zip() is a special function that takes 2  or more iterables [^1] (list or tuple) of same length and give one element from both at same time.
+
 
 ```python
 # using zip
@@ -242,6 +274,7 @@ for x,y,z in zip(a,b,c):
 
 ```
 
+
 enumerate(list/tuple) is a function that gives index,value from the list/tuple
 
 ```python
@@ -254,25 +287,25 @@ for index,value in enumerate(a):
 ### NOTE
 ---
 
-|  Function   | Input           | Ouput                                        |
-| :---------: | --------------- | -------------------------------------------- |
-|   range()   | start,stop,skip | sequence of [start,stop) skipping skip value |
-|    zip()    | list,tuple,...  | gives tuple of each value at same index      |
-| enumerate() | list,tuple      | gives index,value pair from iterable         |
+|  Function   | Input           | Ouput                                           |
+| :---------: | --------------- | ----------------------------------------------- |
+|   range()   | start,stop,skip | sequence of `[start,stop)`, skipping skip value |
+|    zip()    | list,tuple,...  | Pairs elements from each iterable together.     |
+| enumerate() | list,tuple      | Returns a pair of `(index, value)`              |
 ### range
 ---
 > - takes integer values
-> - sequence is [start,stop) skipping skip value
+> - sequence is `[start,stop)`, skipping skip value
 > - default start 0 , default skip 1
 
 ### zip
 ---
-> - takes multiple iterables 
+> - takes multiple iterables[^1]
 > - gives values from each iterables simultaneously
 
 ### enumerate
 ---
-> - takes iterable
+> - takes iterable[^1]
 > - gives index,value pair
 
 
@@ -281,7 +314,8 @@ for index,value in enumerate(a):
 
 unlike `for loop`, `while loop` runs till a condition is satisfied
 
-![[while loop.canvas]]
+[[while loop.canvas]]
+![[while_loop.png]]
 ```python
 a=1
 while a<=10:
@@ -334,5 +368,36 @@ T-=dt # last negative height dt
 print(T)
 ```
 
+[[ball.canvas]]
+![[ball.png]]
 
+Alternate way to solve it:
 
+```python
+u = 10 #m/s
+h = 5 # m initial height
+dt = 1e-3 # 1 x 10^-3
+g = -9.8 #m/s2
+T = 0
+while True:
+	# height travelled
+	h += u*dt + 0.5*g*dt**2
+	
+	if h<0: # hits ground
+		break
+		
+	# update velocity
+	u += g*dt
+	 
+	T += dt # total time
+	print(h)
+	
+print(T)
+```
+
+[[ball_2.canvas]]
+
+![[ball_2.png]]
+[^1]: iterables = list , tuples , strings  , dictionary(keys by defaults)
+	iterables are object from which you can return values using iterators
+	

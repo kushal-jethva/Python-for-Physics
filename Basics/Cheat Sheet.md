@@ -11,4 +11,4 @@
 | bool(data)                 | int , str , float , complex  | True is data present else False |
 | str(data)                  | int , bool , float , complex | makes data into string format   |
 |                            |                              |                                 |
-[[Data Types]]
+[[Basics]]
