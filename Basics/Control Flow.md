@@ -1,6 +1,6 @@
-This is where actual coding start where we can build small system to do something.
+This is where actual coding starts where we can build small system to do something.
 Control Flow consists of :
-- if-eilf-else
+- if-elif-else
 - for loop
 - while loop
 
@@ -17,10 +17,10 @@ elif condition3:
 	then do this
 ...
 else:
-	if nothing satisfies than do this
+	if nothing satisfies then do this
 ```
 
-we use `if condition:` to start the block and then write the code after an indentation (tab space), it defines that the code block belongs to the if statment and will only be ran if conditon met.
+we use `if condition:` to start the block and then write the code after an indentation (tab space), it defines that the code block belongs to the if statment and will only be run if conditon met.
 
 ```python
 if 1<5:
@@ -84,10 +84,10 @@ angle=67
 if angle<90:
 	print('acute angle')
 	
-elif a==90:
+elif angle==90:
 	print('right angle')
 	
-elif angle>90 and angle<180:
+elif 90<angle<180:
 	print('obtuse angle')
 	
 elif angle==180:
@@ -135,7 +135,7 @@ else:
 	
 
 else is used when no more condition left or no condition matched
-or can be used when a single condition is left
+or can be used when a single conditions is left
 '''
 ```
 
@@ -148,7 +148,7 @@ else:
 	print('a is odd')
 ```
 
-More cleaner way is-
+A more concise way-
 
 ```python
 a=2
@@ -164,12 +164,12 @@ else: print('a is odd')
 
 ## Loops
 ---
-There are two main type of loops in python :
+There are two main types of loops in python :
 *  `for loop`
 * `while loop`
 
 `for` loop is used to loop for specific range/values.
-`while` loop is used to loop till specific condition matched.
+`while` loop is used to loop till specific condition True.
 
 ### for loop
 ---
@@ -189,7 +189,7 @@ for i in range(0,5):
 ```
 
 
-`for i in range` its function is just as its read , for variable named i in range , then in performs logic block and i values are changed each time block is completed.
+`for i in range` its function is just as its read , for variable named i in range , then it performs logic block and i values are changed each time block is completed.
 
 
 [[for loop 2.canvas]]
@@ -228,7 +228,7 @@ for i in range(1,7): # 1 to 6
 
 
 ```python
-a = ['kushal','himesh','jay','harsh']
+a = ['Newton', 'Einstein', 'Curie', 'Feynman']
 
 # using list
 for names in a:
@@ -254,7 +254,7 @@ print(v)
 ```
 
 
-zip() is a special function that takes 2  or more iterables [^1] (list or tuple) of same length and give one element from both at same time.
+zip() is a special function that takes 2  or more iterables [^1] (list or tuple) of same length and gives one element from both at same time.
 
 
 ```python
@@ -282,6 +282,11 @@ a=[10,20,30,40,50]
 
 for index,value in enumerate(a):
 	print(index,value)
+
+b=['Newton', 'Einstein', 'Curie', 'Feynman']
+
+for no_,name in enumerate(b):
+	print(no_,name)
 ```
 
 ### NOTE
@@ -301,7 +306,7 @@ for index,value in enumerate(a):
 ### zip
 ---
 > - takes multiple iterables[^1]
-> - gives values from each iterables simultaneously
+> - gives values from each iterable simultaneously 
 
 ### enumerate
 ---
@@ -323,7 +328,7 @@ while a<=10:
 	print(a)
 ```
 
-while loop is used when you care about if condition is match and dont know how many time the loop will run, for loop need specific length over which it will loops, and while loop require condition and will loop till the condition is matched
+while loop is used when you care about if condition is True and don't know how many times the loop will run, for loop need specific length over which it will loops, and while loop require condition and will loop as long as the condition is **True**.
 
 ## Example
 ---
@@ -398,6 +403,38 @@ print(T)
 [[ball_2.canvas]]
 
 ![[ball_2.png]]
+
+# Extras
+---
+Many time we can have conditions where we don't want to execute rest of the code and move to next value in loop :
+
+```python
+a = list(range(-5,6)) #[ -5,-4,..4,5]
+
+for value in a:
+	if value==0:
+		continue
+		#"The Skip Button" 
+		# skips the rest of the current round and starts the next one.
+		
+	elif value==2:
+		break
+		#"The Emergency Exit" , stops the loop entirely
+		
+		
+	print(value)
+print()	
+a=0
+while True: # infinte loop
+	a+=1
+	if a==5: continue
+	elif a==10: break
+	print(a)
+	
+```
+
+
+
 [^1]: iterables = list , tuples , strings  , dictionary(keys by defaults)
-	iterables are object from which you can return values using iterators
+	An **iterable** is any Python object capable of returning its members one at a time, allowing it to be looped over
 	
